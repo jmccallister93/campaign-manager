@@ -11,34 +11,33 @@ const ColumnNav = (props) => {
 
   const submitHandler = (event) => {
     event.preventDefault();
-
-    const newItem = input
-    
-    props.onSaveNewItem(newItem)
-
+    const newItem ={'Name': input}
     setInput("");
-    console.log('click')
+    console.log({input})
+    
   };
 
   return (
-    <div className="wrapper__columnnav">
-      <form onSubmit={submitHandler}>
-        <label>
-          Add Item:
-          <input
-            id={id}
-            value={input}
-            type="text"
-            onChange={newItemHandler}
-          />
-        </label>
-        <button type="submit">
-          +
-        </button>
-        <span>{input}</span>
-      </form>
-    </div>
-  );
+    <div className="wrapper__columnnav"></div>
+  )
+    // <div className="wrapper__columnnav">
+    //   <form onSubmit={submitHandler}>
+    //     <label>
+    //       Add Item:
+    //       <input
+    //         id={id}
+    //         value={input}
+    //         type="text"
+    //         onChange={newItemHandler}
+    //       />
+    //     </label>
+    //     <button type="submit">
+    //       +
+    //     </button>
+    //     <span>{ input }</span>
+    //   </form>
+    // </div>
+
 };
 
 export default ColumnNav;
