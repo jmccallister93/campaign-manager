@@ -25,21 +25,3 @@ const TabItem = (props) => {
 };
 
 export default TabItem;
-
-
-
-
-
-
-
-
-
-
-
-// const populateTabText = (data) => {
-  //   for(let i=0; i<data.length; i++){
-  //     return data[i];
-  //   };
-  // };
-
-  // console.log(populateTabText(tabItemList))
