@@ -4,10 +4,11 @@ import "../SCSS/WrapperContent.scss"
 
 
 const Content = (props) => {
+
   return (
     <div className="wrapper__content">
       <Tabs />
-      <Columns />
+      <Columns items={props.items}/>
     </div>
   );
 };

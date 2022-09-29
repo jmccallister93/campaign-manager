@@ -12,7 +12,7 @@ const Columns = (props) => {
 
   return (
     <div className="wrapper__columns">
-      <ColumnNav />
+      <ColumnNav items={props.items}/>
       <ColumnLinked />
       <ColumnDetails />
     </div>
