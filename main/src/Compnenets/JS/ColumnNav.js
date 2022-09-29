@@ -3,33 +3,40 @@ import "../SCSS/WrapperColumnNav.scss";
 
 const ColumnNav = (props) => {
   const id = useId();
-  const [input, setInput] = useState(props?.value ?? "");
+  const [input, setInput] = useState(""); 
 
-  const navItemsList = [];
-
-  const addItem = () => {
-    navItemsList.push(input)
+  const newItemHandler = (event) =>{
+    setInput(event.target.value)
   }
+
+  const submitHandler = (event) => {
+    event.preventDefault();
+
+    const newItem = input
+    
+    props.onSaveNewItem(newItem)
+
+    setInput("");
+    console.log('click')
+  };
 
   return (
     <div className="wrapper__columnnav">
-      <label>
-        Add Item:
-        <input
-          id={id}
-          value={input}
-          onInput={(e) => setInput(e.target.value)}
-        />
-      </label>
-      <input 
-        type="submit" 
-        value="+"
-        onClick={addItem}
-      />
-      <ul>
-        <li></li>
-      </ul>
-      
+      <form onSubmit={submitHandler}>
+        <label>
+          Add Item:
+          <input
+            id={id}
+            value={input}
+            type="text"
+            onChange={newItemHandler}
+          />
+        </label>
+        <button type="submit">
+          +
+        </button>
+        <span>{input}</span>
+      </form>
     </div>
   );
 };
