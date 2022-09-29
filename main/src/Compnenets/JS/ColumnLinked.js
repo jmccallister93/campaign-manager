@@ -1,13 +1,11 @@
-import WrapperColumnLinked from "./WrapperColumnLinked";
+import "../SCSS/WrapperColumnLinked.scss";
 
 const ColumnLinked = (props) => {
   return (
-    <>
-      <WrapperColumnLinked>
+      <div className="wrapper__columnlinked">
         <div>Linked 1 </div>
         <div>Linked 2</div>
-      </WrapperColumnLinked>
-    </>
+      </div>
   );
 };
 

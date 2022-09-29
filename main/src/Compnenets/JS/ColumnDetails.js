@@ -1,12 +1,10 @@
-import WrapperColumnDetails from "./WrapperColumnDetails.js";
+import "../SCSS/WrapperColumnDetails.scss";
 
 const ColumnDetails = (props) => {
   return (
-    <>
-      <WrapperColumnDetails>
+      <div className="wrapper__columndetails">
         <div>Details </div>
-      </WrapperColumnDetails>
-    </>
+      </div>
   );
 };
 

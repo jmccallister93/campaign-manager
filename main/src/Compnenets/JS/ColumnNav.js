@@ -1,12 +1,12 @@
-import WrapperColumnNav from "./WrapperColumnNav";
+import "../SCSS/WrapperColumnNav.scss"
 
 const ColumnNav = (props) => {
   return (
     <>
-      <WrapperColumnNav>
+      <div className="wrapper__columnnav">
         <div>Thing 1 </div>
         <div>Thing 2</div>
-      </WrapperColumnNav>
+      </div>
     </>
   );
 };

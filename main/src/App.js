@@ -1,4 +1,4 @@
-import Content from "./Compnenets/Content";
+import Content from "./Compnenets/JS/Content";
 
 function App() {
   return <Content />;

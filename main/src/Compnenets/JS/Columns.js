@@ -1,15 +1,15 @@
 import ColumnDetails from "./ColumnDetails";
 import ColumnLinked from "./ColumnLinked";
 import ColumnNav from "./ColumnNav";
-import WrapperColumns from "./WrapperColumns";
+import "../SCSS/WrapperColumns.scss"
 
 const Columns = (props) => {
   return (
-    <WrapperColumns>
+    <div className="wrapper__columns">
       <ColumnNav />
       <ColumnLinked />
       <ColumnDetails />
-    </WrapperColumns>
+    </div>
   );
 };
 

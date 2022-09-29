@@ -1,5 +1,5 @@
 import TabItem from "./TabItem";
-import "./WrapperTabs.scss";
+import "../SCSS/WrapperTabs.scss";
 
 const Tabs = (props) => {
   return (
