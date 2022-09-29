@@ -1,0 +1,6 @@
+.wrapper__columns{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    height: 90vh;
+    gap: 0px;
+}

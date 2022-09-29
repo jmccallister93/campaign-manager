@@ -1,0 +1,9 @@
+
+.wrapper__tabs{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-column-gap: 0px;
+    justify-items: stretch;
+    height: 3vh;
+    width: 95vw;
+}
