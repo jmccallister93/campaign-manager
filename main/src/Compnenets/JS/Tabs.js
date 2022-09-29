@@ -5,11 +5,6 @@ const Tabs = (props) => {
   return (
     <div className="wrapper__tabs">
       <TabItem />
-      <TabItem />
-      <TabItem />
-      <TabItem />
-      <TabItem />
-      <TabItem />
     </div>
   );
 };
