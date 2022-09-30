@@ -11,7 +11,7 @@ const NewItemForm = (props) => {
     event.preventDefault();
 
     const itemObject = {
-      item: enteredItem,
+      title: enteredItem,
     };
 
     props.onSaveItemObject(itemObject);
