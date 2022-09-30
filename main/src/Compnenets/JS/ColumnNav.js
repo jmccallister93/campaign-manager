@@ -1,14 +1,20 @@
 import { useId, useState } from "react";
 import "../SCSS/WrapperColumnNav.scss";
-import NewItem from "./NewItem";
+import ColumnNavItems from "./ColumnNavItems";
 
 const ColumnNav = (props) => {
+  console.log(props.items);
 
   return (
     <div className="wrapper__columnnav">
-      <div>{props.items}</div>
+      {props.items.map((item) => (
+        <ColumnNavItems items={item.title} />
+      ))}
     </div>
   );
 };
 
 export default ColumnNav;
+{
+  /* <ColumnNavItems items={props.items[0].title}/> */
+}
