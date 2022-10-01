@@ -13,14 +13,14 @@ const TabItem = (props) => {
     "Items",
   ];
 
-  const [selectedTab, setSelectedTab] = useState(tabTextList[0]);
+  const [selectedItem, setSelectedItem] = useState(tabTextList[0]);
 
   const tabText = tabTextList.map((tabItem) => (
     <span
       className={
-        selectedTab === tabItem ? "tabitem__text--active" : "tabitem__text"
+        selectedItem === tabItem ? "tabitem__text--active" : "tabitem__text"
       }
-      onClick={() => setSelectedTab(tabItem)}
+      onClick={() => setSelectedItem(tabItem)}
     >
       {tabItem}
     </span>

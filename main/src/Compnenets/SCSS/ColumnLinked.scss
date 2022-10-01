@@ -1,4 +1,4 @@
-.nav__items {
+.linkeditem {
   color: #303841;
   transition: 0.2s;
 
@@ -10,7 +10,7 @@
   }
 }
 
-.nav__items--active {
+.linkeditem--active{
   background-color: green;
   box-shadow: 1px 1px 15px 1px #303841;
   transform: scale(1.05);

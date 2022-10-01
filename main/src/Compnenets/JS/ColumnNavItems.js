@@ -1,6 +1,31 @@
-import '../SCSS/ColumnNav.scss'
+import { useState } from "react";
+import "../SCSS/ColumnNav.scss";
 
 const ColumnNavItems = (props) => {
-  return <div className="nav__items">{props.items}</div>;
+  const [isActive, setActive] = useState("false");
+
+  const ToggleClass = () => {
+    setActive(!isActive);
+  };
+
+  const classes = isActive ? "nav__items" : "nav__items--active";
+
+  const item = (
+    <div className={classes} onClick={ToggleClass}>
+      {props.items}
+    </div>
+  );
+
+  const itemsList = [item.props.className];
+
+  
+
+  itemsList.forEach((element) => {
+    if (element === "nav__items--active") {
+      element = "nav__items";
+    }
+  });
+
+  return <>{item}</>;
 };
 export default ColumnNavItems;
