@@ -1,9 +1,6 @@
-import React, { useState } from "react";
+import '../SCSS/ColumnNav.scss'
 
 const ColumnNavItems = (props) => {
-  console.log(props.items);
-//   const [items, setItems] = useState(props.items);
-
-  return <div>{props.items}</div>;
+  return <div className="nav__items">{props.items}</div>;
 };
 export default ColumnNavItems;

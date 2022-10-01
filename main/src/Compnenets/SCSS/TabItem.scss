@@ -1,12 +1,30 @@
-.tabitem__div{
-    display: flex;
-    
+.tabitem__div {
+  display: flex;
 }
 
-.tabitem__text{
-    display: inline-block;
-    border: 1px solid;
-    padding-left: 5px;
-    padding-right: 5px;
+.tabitem__text {
+  color: #303841;
+  display: inline-block;
+  border: 1px solid;
+  padding-left: 5px;
+  padding-right: 5px;
+  transition: 0.3s;
+
+  &:hover {
+    background-color: #d72323;
+    box-shadow: 1px 1px 15px 1px #303841;
+    transform: scale(1.05);
+    color: white;
+  }
 }
 
+.tabitem__text--active {
+  background-color: green;
+  box-shadow: 1px 1px 15px 1px #303841;
+  transform: scale(1.05);
+  color: white;
+  border: 1px solid;
+  padding-left: 5px;
+  padding-right: 5px;
+  transition: 0.3s;
+}

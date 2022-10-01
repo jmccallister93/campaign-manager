@@ -27,8 +27,6 @@ const NewItemForm = (props) => {
         value={enteredItem} 
         onChange={itemChangeHandler} 
         />
-      </div>
-      <div>
         <button type="submit">+</button>
       </div>
     </form>

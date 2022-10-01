@@ -1,20 +1,15 @@
-import { useId, useState } from "react";
 import "../SCSS/WrapperColumnNav.scss";
 import ColumnNavItems from "./ColumnNavItems";
+import { Resizable } from "react-resizable";
 
 const ColumnNav = (props) => {
-  console.log(props.items);
-
   return (
     <div className="wrapper__columnnav">
       {props.items.map((item) => (
-        <ColumnNavItems items={item.title} />
+        <ColumnNavItems key={item.id} items={item.title} />
       ))}
     </div>
   );
 };
 
 export default ColumnNav;
-{
-  /* <ColumnNavItems items={props.items[0].title}/> */
-}

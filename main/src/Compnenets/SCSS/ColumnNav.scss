@@ -1,0 +1,11 @@
+.nav__items{
+    color: #303841;
+    transition: 0.2s;
+
+    &:hover{
+        background-color: rgba(215, 35, 35, 1);
+        box-shadow: 1px 1px 15px 1px #303841;
+        transform: scale(1.05);
+        color: white;
+    }
+}
