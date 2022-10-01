@@ -1,5 +1,7 @@
 import "../SCSS/WrapperTabItem.scss";
 import "../SCSS/TabItem.scss";
+import { useState } from "react";
+import { toBeValid } from "@testing-library/jest-dom/dist/matchers";
 
 const TabItem = (props) => {
   const tabTextList = [
@@ -11,45 +13,22 @@ const TabItem = (props) => {
     "Items",
   ];
 
-  // const onClickClassChange = (event) => {
-  //   if (event.target.className === "tabitem__text") {
-  //     event.target.className = "tabitem__text--active";
-  //   } else {
-  //     event.target.className = "tabitem__text";
-  //   }
-  // };
+  const [selectedTab, setSelectedTab] = useState(tabTextList[0]);
 
-  const onClickClassCheck = (event) => {
-    const div = document.getElementsByClassName("tabitem__div");
-    const divClass = div[0];
-    const childClass = divClass.childNodes;
-
-    childClass.forEach((tab) => {
-      if (
-        event.target.className === "tabitem__text" &&
-        tab.className === "tabitem__text"
-      ) {
-        event.target.className = "tabitem__text--active";
+  const tabText = tabTextList.map((tabItem) => (
+    <span
+      className={
+        selectedTab === tabItem ? "tabitem__text--active" : "tabitem__text"
       }
-      else if(
-        tab.className === 'tabitem__text--active' 
-      ){
-        tab.className = 'tabitem__text'
-        event.target.className = 'tabitem__text'
-      }
-    });
-    
-  };
-
-  const tabTexts = tabTextList.map((tabText) => (
-    <span className="tabitem__text">{tabText}</span>
+      onClick={() => setSelectedTab(tabItem)}
+    >
+      {tabItem}
+    </span>
   ));
 
   return (
     <div className="wrapper__tabitem">
-      <span className="tabitem__div" onClick={onClickClassCheck}>
-        {tabTexts}
-      </span>
+      <span className="tabitem__div">{tabText}</span>
     </div>
   );
 };
